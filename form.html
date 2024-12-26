@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form.css">
+    <title>Форма</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="content-wrapper">
+            <div class="header__wrapper">
+                <a href="index.html" class="header__logo logo">
+                    <img src="images/tpasslogo.svg" alt="tpass-logo" class="logo__img">
+                </a>
+                <nav class="header__navigation navigation">
+                    <ul class="navigation__list list">
+                        <li class="list__item"><a href="#" class="navigation__link">Stores</a></li>
+                        <li class="list__item"><a href="#" class="navigation__link">Help & Support</a></li>
+                        <li class="list__item"><a href="#"
+                                class="navigation__link navigation__link--download">Download</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="form-wrapper">
+            <form action="//httpbin.org/post" method="post" class="form">
+                <fieldset class="form__personal-info">
+                    <legend class="form__legend"> Personal information </legend>
+                    <p class="form__text">Type your name:</p><label><input class="form__input" type="text" name="name"
+                            placeholder="Name Surname" required>
+                    </label>
+                    <p class="form__text">Your birthdate:</p><label><input class="form__input" type="date"
+                            name="birth-date" required></label>
+                    <p class="form__text">Your gender:</p><input class="form__input-radio" type="radio" name="sex"
+                        value="man" id="male" checked> <label for="male">Male</label>
+                    <input type="radio" class="form__input-radio" name="sex" value="woman" id="female"><label
+                        for="female">Female</label>
+                    <p class="form__text">Your password:</p><label><input class="form__input" type="password"
+                            name="password" placeholder="Password" required></label>
+                </fieldset>
+                <fieldset class="form__contact-details">
+                    <legend class="form__legend"> Contact details </legend>
+                    <p class="form__text"><label for="mail">Your email:</label></p><input class="form__input" id="mail"
+                        type="email" name="email" placeholder="tpass@gmail.com" required>
+                    <p class="form__text"><label for="phone">Your phone number:</label></p><input class="form__input"
+                        type="tel" name="phone-number" id="phone" placeholder="+79503858079" required>
+                    <div class="form__checkbox-section">
+                        <p class="form__text">Preffered time to contact:</p><input class="form__input-checkbox"
+                            type="checkbox" name="time" value="morning" id="morning"><label
+                            for="morning">Morning</label>
+                        <input class="form__input-checkbox" type="checkbox" name="time" value="afternoon" id="afternoon"
+                            checked><label for="afternoon">Afternoon</label>
+                        <input class="form__input-checkbox" type="checkbox" name="time" value="evening"
+                            id="evening"><label for="evening">Evening</label>
+                        <input class="form__input-checkbox" type="checkbox" name="time" value="night" id="night"><label
+                            for="night">Night</label>
+                    </div>
+                </fieldset>
+                <div class="btn-wrapper">
+                    <button type="submit" class="btn btn-send">Send</button>
+                    <button type="reset" class="btn btn-disabled" disabled>Reset</button>
+                </div>
+            </form>
+        </div>
+        <div class="form-wrapper">
+            <form action="//httpbin.org/post" method="post" class="form definitions">
+                <dl class="form__datalist datalist">
+                    <dt class="datalist__term term">Псевдоклассы и псевдоэлементы.</dt><br>
+                    <dd class="term__definition">Проще говоря, псевдоэлементы задают новые области страницы, которых не
+                        было в HTML-разметке, а
+                        псевдоклассы определяют состояние объектов при определенных условиях.</dd> <br>
+                    <dt class="datalist__term term">Псевдокласс.</dt> <br>
+                    <dd class="term__definition">Псевдокласс — это селектор, который выбирает элементы, находящиеся в
+                        специфическом состоянии,
+                        например, они являются первым элементом своего типа, или на них наведён указатель мыши. Они
+                        обычно действуют так, как если бы вы применили класс к какой-то части вашего документа, что
+                        часто помогает сократить избыточные классы в разметке и даёт более гибкий, удобный в поддержке
+                        код. Псевдоклассы — это ключевые слова, которые начинаются с двоеточия <code>:</code></dd> <br>
+                    <div class="form__checkbox-section checkbox-section">
+                        <input checked class="form__input-checkbox" type="checkbox" name="pseudoclass" value="root"
+                            id="root"><label for="root"><code>:root</code></label><br>
+                        <input checked class="form__input-checkbox" type="checkbox" name="pseudoclass" value="links"
+                            id="links"><label for="links"><code>:link</code></label><br>
+                        <input checked class="form__input-checkbox" type="checkbox" name="pseudoclass" value="visited"
+                            id="visited"><label for="visited"><code>:visited</code></label><br>
+                        <input checked class="form__input-checkbox" type="checkbox" name="pseudoclass" value="hover"
+                            id="hover"><label for="hover"><code>:hover</code></label><br>
+                        <input checked class="form__input-checkbox" type="checkbox" name="pseudoclass" value="active"
+                            id="active"><label for="active"><code>:active</code></label><br>
+                        <input checked class="form__input-checkbox" type="checkbox" name="pseudoclass" value="focus"
+                            id="focus"><label for="focus"><code>:focus</code></label><br>
+                        <input checked class="form__input-checkbox" type="checkbox" name="pseudoclass"
+                            value="childgroup" id="childgroup"><label
+                            for="childgroup"><code>:nth-child</code></label><br>
+                        <input class="form__input-checkbox" type="checkbox" name="pseudoclass" value="typegroup"
+                            id="typegroup"><label for="typegroup"><code>:nth-of-type</code></label><br>
+                        <input checked class="form__input-checkbox" type="checkbox" name="pseudoclass" value="checked"
+                            id="checked"><label for="checked"><code>:checked</code></label><br>
+                        <input checked class="form__input-checkbox" type="checkbox" name="pseudoclass" value="disabled"
+                            id="disabled"><label for="disabled"><code>:disabled</code></label><br>
+                        <input class="form__input-checkbox" type="checkbox" name="pseudoclass" value="enabled"
+                            id="enabled"><label for="enabled"><code>:enabled</code></label><br>
+                        <input checked class="form__input-checkbox" type="checkbox" name="pseudoclass" value="required"
+                            id="required"><label for="required"><code>:required</code></label><br>
+                    </div>
+                </dl>
+                <dl class="form__datalist datalist">
+                    <dt class="datalist__term term">Псевдоэлемент.</dt> <br>
+                    <dd class="term__definition">Псевдоэлементы ведут себя сходным образом, однако они действуют так,
+                        как если бы вы добавили в
+                        разметку целый новый HTML-элемент, а не применили класс к существующим элементам. Псевдоэлементы
+                        начинаются с двойного двоеточия <code>::</code></dd>
+                    <div class="form__checkbox-section checkbox-section">
+                        <input class="form__input-checkbox" type="checkbox" name="pseudoelement" value="fletter"
+                            id="fletter" checked><label for="fletter"><code>::first-letter</code></label><br>
+                        <input class="form__input-checkbox" type="checkbox" name="pseudoelement" value="fline"
+                            id="fline"><label for="fline"><code>::first-line</code></label><br>
+                        <input class="form__input-checkbox" type="checkbox" name="pseudoelement" value="slct" id="slct"
+                            checked><label for="slct"><code>::selection</code></label><br>
+                        <input class="form__input-checkbox" type="checkbox" name="pseudoelement" value="markr"
+                            id="markr"><label for="markr"><code>::marker</code></label><br>
+                        <input class="form__input-checkbox" type="checkbox" name="pseudoelement" value="bfr" id="bfr"
+                            checked><label for="bfr"><code>::before</code></label><br>
+                        <input class="form__input-checkbox" type="checkbox" name="pseudoelement" value="aftr" id="aftr"
+                            checked><label for="aftr"><code>::after</code></label><br>
+                        <input class="form__input-checkbox" type="checkbox" name="pseudoelement" value="plchldr"
+                            id="plchldr" checked><label for="plchldr"><code>::placeholder</code></label><br>
+                    </div>
+                </dl>
+            </form>
+        </div>
+    </main>
+    <footer class="footer">
+        <img src="images/leaf.svg" alt="leaf" class="leaf">
+        <img src="images/leaves.svg" alt="leaves" class="leaves">
+        <div class="footer-wrapper">
+            <a class="footer__logo logo" href="#">
+                <img src="images/icons/tpass-white.svg" alt="logo" class="footer-logo-img">
+            </a>
+            <div class="footer-list-wrapper">
+                <ul class="footer__list">
+                    <li>
+                        <p class="footer__heading">Company</p>
+                    </li>
+                    <li><a href="#" class="footer__link">Merchant Portal</a></li>
+                </ul>
+                <ul class="footer__list">
+                    <li>
+                        <p class="footer__heading">Support</p>
+                    </li>
+                    <li><a href="#" class="footer__link">FAQ</a>
+                    </li>
+                    <li><a href="#" class="footer__link">Terms of Service</a>
+                    </li>
+                    <li><a href="#" class="footer__link">Privacy Policy</a>
+                    </li>
+                </ul>
+                <ul class="footer__list">
+                    <li>
+                        <p class="footer__heading">Follow us</p>
+                    </li>
+                    <li><a href="#" class="footer__link">Twitter</a>
+                    </li>
+                    <li><a href="#" class="footer__link">Instagram</a>
+                    </li>
+                    <li><a href="#" class="footer__link">Facebook</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
